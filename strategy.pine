@@ -1,6 +1,7 @@
 //@version=5
 strategy('Neural Network- Crypto (WIP)', overlay=true, initial_capital=5000, default_qty_type=strategy.cash, default_qty_value=5000)
 price = plot(close, title='Close Line', color=color.new(color.blue, 0), display=display.none)
+
 ////////////////////////////////////////////////////////////////////////////////
 //TREND INDICATORS)
 //Trend EMA
@@ -12,6 +13,7 @@ out111 = ta.ema(src111, len111)
 ma111 = plot(out111, title='EMA 200', linewidth=2, color=color.new(color.blue, 0), offset=0)
 mabuy = out111 > out111[1]
 masell = out111 < out111[1]
+
 //5 EMAs////////////////////////////////////////////////////////////////////////
 len1 = 9
 src1 = close
@@ -1279,3 +1281,4 @@ if printstoplong or printstopshort and usestopalert
 
 //END
 ////////////////////////////////////////////////////////////////////////////////
+
